@@ -15,7 +15,7 @@
         </a>
         <ul class="nav">
             <li class="nav-item"><a href="#topBanner" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#unitList">Units</a>
+            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#unitListModal">Units</a>
             </li>
             <li class="nav-item"><a href="#googleMap" class="nav-link">Map</a></li>
             <li class="nav-item"><a href="#contactInfo" class="nav-link">Contact</a></li>
@@ -58,23 +58,7 @@
             <button class="button-16">Contact Us</button>
         </div>
     </div>
-    <div class="modal fade" id="unitList" tabindex="-1" aria-labelledby="unitListLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="unitListLabel">New message</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="allUnits">
-              [Unit Details]
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send message</button>
-            </div>
-          </div>
-        </div>
-      </div>
+   
     <div class="container text-center units">
         <div class="row">
             <div class="col">
@@ -86,7 +70,7 @@
                 </ul>
                 <!-- <p> We have 4 medium sized units with 10' doors that are 24' long.<br><br></p> -->
                 <!-- <p>Pricing is $100/month if paid annually or $125/month monthly.</p> -->
-                <button class="button-17" id="typeInfoMed" data-bs-toggle="modal" data-bs-target="#unitInfo">Check Details and Availability</button>
+                <button class="button-17" id="typeInfoMed" data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
             </div>
             <div class="col">
                 <div class="h4"><h4>12X32</h4></div>
@@ -98,7 +82,7 @@
                 <!-- <p> We have 2 large units with 12' doors that are 32' long.<br><br></p> -->
                 
                 <!-- <p>Pricing is $200/month if paid annually or $225/month monthly.</p> -->
-                <button class="button-17" id="typeInfoLarge"data-bs-toggle="modal" data-bs-target="#unitInfo">Check Details and Availability</button>
+                <button class="button-17" id="typeInfoLarge"data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
             </div>
             <div class="col">
                 <div class="h4"><h4>12X40</h4></div>
@@ -110,7 +94,7 @@
                 <!-- <p> We have 2 X-large units each with 12' wide doors at the front and back of the unit and 40' length.</p> -->
                 
                 <!-- <p>Pricing is $300/month if paid annually or $350/month monthly. </p> -->
-                <button class="button-17" id="typeInfoXLarge"data-bs-toggle="modal" data-bs-target="#unitInfo">Check Details and Availability</button>
+                <button class="button-17" id="typeInfoXLarge"data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
             </div>
             <div class="col">
                 <div class="h4"><h4>45X45</h4></div>
@@ -120,30 +104,14 @@
                     <li>Contact for pricing</li>
                 </ul>
                 <!-- <p> This is a 1600 square foot indoor space with wooden floors and a bathroom. Contact for pricing.</p> -->
-                <button class="button-17" id="typeInfoFlex"data-bs-toggle="modal" data-bs-target="#unitInfo">Check Details and Availability</button>
+                <button class="button-17" id="typeInfoFlex" data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
             </div>
         </div>
             <div class = "container waitingList">
              <p>(Don't see availability for the unit size of your choice? Feel free to call, text, email, or submit your contact information here. (have "here" link to the contact form) We will place you on a waiting list and let you know when a spot opens up! Don't forget to specify unit size in your message.)</p>
             </div>
     </div>
-    <div class="modal fade" id="unitInfo" tabindex="-1" aria-labelledby="unitListLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="unitListLabel">New message</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="allUnits">
-              [Unit Details]
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send message</button>
-            </div>
-          </div>
-        </div>
-      </div>
+   
    
     <div class="p-5 bannerImage2">
         <div class="container-fluid py-5"></div>
@@ -167,49 +135,78 @@
             <div>
                 <div class="review">
                 <img src ="img/fiveStar.jpg" class="stars">
-                <button class="button-18">Submit Your Review Here</button>
+                <button class="button-18" data-bs-toggle="modal" data-bs-target="#reviewModal">Submit Your Review Here</button>
                 </div>
                 <p>We currently have a 4.7 star rating on google reviews. If you would like to share about your experience with Sweetwater Storage we would love to hear from you.</p>
             </div>
         </div>
         </div>
     </div>
-<!-- 
-    <div>
-    <div class="labelsForContact">
-    <h4>Contact us Today</h4>
-    <h4>Driving Directions to Sweetwater Storage</h4>
-    </div>
-    <div class="row findUs" >
-         <div class="col-md-6  contact" id="contactInfo">
-        <p>Sweetwater Storage is a family owned and operated business. We appreciate your patronage and look forward to working with you in the future. Please feel free to call, text, or email with any questions or to request any further information. We look forward to hearing from you.</p>
-        <div class="greenText">Call: 435-258-2139</div>
-        <div class="greenText">Text: 435-287-5070</div>
-        <div class="greenText">Email: sa_ripplinger@comcast.net</div>
-        <div>
-            <div class="review">
-            <img src ="img/fiveStar.jpg" class="stars">
-            <button class="button-18">Submit Your Review Here</button>
-            </div>
-            <p>We currently have a 4.7 star rating on google reviews. If you would like to share about your experience with Sweetwater Storage we would love to hear from you.</p>
-        </div>
-    </div>
-        <div class="col-md-6 map" id="googleMap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.4746041334915!2d-111.39380804777731!3d41.90415507911838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87540df80661c2d7%3A0x9e4a4f601174efe5!2s2332%20Kimball%20Ln%2C%20Garden%20City%2C%20UT%2084028!5e0!3m2!1sen!2sus!4v1666879604625!5m2!1sen!2sus" width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>2332 Kimball Ln.
-            Garden City, Utah
-            84028 <br>
-            (On the road above Pickleville Playhouse, about 2 blocks from the main road.)</p>
-        </div>
-</div> -->
-       
+
     <div class="bottomNav">
             <img id="logo" src="img/logo.png" height="85">
             <div>Call: 435-258-2139</div>
             <div>Text: 435-287-5070</div>
             <div>Email: sa_ripplinger@comcast.net</div>
     </div>
+
+    <div class="modal fade" id="unitListModal" tabindex="-1" aria-labelledby="unitListModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="unitListModalLabel">See All Units</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="allUnits">
+              [Unit Details]
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
       
+    <div class="modal fade" id="unitInfoModal" tabindex="-1" aria-labelledby="unitInfoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="unitInfoModalLabel">Unit Details</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="allUnits">
+              [Unit Details]
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+
+      <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="reviewModalLabel">Submit A Review</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="submitReviewForm">
+              [Review Form]
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Renter",
+        "email": "johnrenter@abc.com",
+        "phone": "123-456-7890",
+        "unitSize": "12x32"
+    }
+]

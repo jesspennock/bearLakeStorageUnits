@@ -8,13 +8,13 @@ app.use(express.json())
 const{
     getSizeGroupInfo,
     getAllUnits, 
-    contactUs,
+    submitReview,
     getOnAWaitingList,
 } = require("./controller")
 
 app.get("/api/units/:size", getSizeGroupInfo)
 app.get("/api/units", getAllUnits)
-app.post("/api/contactUs", contactUs )
+app.post("/api/submitReview", submitReview)
 app.post("/api/waitinglist", getOnAWaitingList)
 
 app.listen(4000, () => console.log("Server running on 4000"))
