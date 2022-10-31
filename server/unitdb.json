@@ -1,0 +1,75 @@
+[
+    {
+    "id": 1,
+    "category": "10x24",
+    "name": "Medium Unit 1",
+    "available": false,
+    "monthlyRate": 125,
+    "annualRate": 100
+    },
+    {
+    "id": 2,
+    "category": "10x24",
+     "name": "Medium Unit 2",
+     "available": false,
+     "monthlyRate": 125,
+    "annualRate": 100
+    },
+    {
+    "id": 3,
+    "category": "10x24",
+    "name": "Medium Unit 3",
+    "available": false,
+    "monthlyRate": 125,
+    "annualRate": 100
+    },
+    {
+    "id": 4,
+    "category": "10x24",
+    "name": "Medium Unit 4",
+    "available": false,
+    "monthlyRate": 125,
+    "annualRate": 100
+    },
+    {
+    "id": 5,
+    "category": "12x32",
+    "name": "Large Unit 1",
+    "available": false,
+    "monthlyRate": 225,
+    "annualRate": 200
+    },
+    {
+    "id": 6,
+    "category": "12x32",
+    "name": "Large Unit 2",
+    "available": false,
+    "monthlyRate": 225,
+    "annualRate": 200
+    },
+    {
+    "id": 7,
+    "category": "12x40",
+    "name": "X-Large Unit 1",
+    "available": false,
+    "monthlyRate": 350,
+    "annualRate": 300
+    },
+    {
+    "id": 8,
+    "category": "12x40",
+    "name": "X-Large Unit 2",
+    "available": false,
+    "monthlyRate": 350,
+    "annualRate": 300
+     },
+    {
+    "id": 9,
+    "category": "45x45",
+    "name": "Indoor Flex Space",
+    "available": false,
+    "monthlyRate": "Call for details",
+    "annualRate": "Call for details"
+    }
+]
+                       

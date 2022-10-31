@@ -1,0 +1,10 @@
+Client File
+HTML
+CSS
+Javascript main.js
+
+Server File
+DB File
+Server server.js
+Controller
+

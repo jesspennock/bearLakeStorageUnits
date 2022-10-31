@@ -1,0 +1,210 @@
+body {
+    background-color: #f8f8f8
+}
+header {
+    /* background-color: #1093A7; */
+    background-image: linear-gradient(to bottom, #9bdbe5, #1093A7);
+    /* background-image: linear-gradient(to bottom right, #f8fcfc, #656a78); */
+    font-size: medium;
+    color: #D8DBE2;
+    padding-right: 0;
+    padding-left: 15px;
+    border-bottom: black;
+    margin: 3px;
+    box-shadow: 3px 3px 3px #596071;
+}
+.nav {
+    align-items: end;
+    --bs-nav-link-color: #D8DBE2;
+    --bs-nav-link-hover-color: #A9BCD0;
+
+}
+.nav-link {
+    color: #D8DBE2;
+    font-size: 12px;
+}
+.bannerImage{
+    height: 350px;
+    background: url(img/banner.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 5px #596071;
+    
+}
+
+.button-16 {
+  background-color:#D8DBE2;
+  border: 1px solid #8494a4;
+  border-radius: 1px;
+  color: #2b3751;
+  cursor: pointer;
+  font-size: 16px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  touch-action: manipulation
+}
+
+.button-16:hover {
+  border-color: black;
+  box-shadow: black 0 3px 3px;
+  color: #202124;
+}
+    
+.paddedBtn{
+    margin-right: 30px;
+}
+.button-17 {
+    background-color: #39496d;
+    border: 1px solid #373F51;
+    border-radius: 1px;
+    color: #D8DBE2;
+    cursor: pointer;
+    font-size: 12px;
+    height: 30px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    touch-action: manipulation;
+  }
+  
+.button-17:hover {
+    border-color: black;
+    box-shadow: #373F51 0 3px 3px;
+    color: #A9BCD0;
+}
+.button-18 {
+    background-color: white;
+    border: 1px solid #373F51;
+    border-radius: 1px;
+    color: #39496d;
+    cursor: pointer;
+    font-size: 12px;
+    height: 50px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    touch-action: manipulation;
+  }
+  
+.button-18:hover {
+    border-color: black;
+    box-shadow: #373F51 0 3px 3px;
+    color: #2b3751;
+}
+.aboutUs{
+    font-size: medium;
+    justify-content: left;
+    align-content: center;
+    background-color: #4b6ab3;
+    background-image: linear-gradient(to bottom, #39496d, #035279);
+    margin-bottom: 3px;
+    /* box-shadow: 3px 3px 3px #2b3751; */
+    padding: 25px;
+    text-align: center;
+    color:#D8DBE2
+}
+h4 {
+    font-size: large;   
+}
+.h4{
+    background-color: #D8DBE2;
+}
+.location{
+    background-color: #373F51;
+    color:#D8DBE2;
+    text-align: center;
+    justify-content: center;
+}
+.units{
+    margin-top: 3 px;
+    background-color: #a9aebc;
+    font-size: small;
+    align-content: flex-end;
+    background-image: linear-gradient(to top, #fdfdfd, #777c8b);
+    /* box-shadow: 2px 3px 2px #192c2e; */
+    
+   
+    
+}
+.col{
+    font-size: 16px;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    color: #2b3751;
+}
+.waitingList{
+    font-size: small;
+    color: #2b3751;
+    
+    
+}
+.ca{
+    align-content: flex-end;
+}
+.bannerImage2{
+    height: 350px;
+    background: url(img/banner_storage.png) no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    box-shadow: 3px 3px 3px #596071;
+  
+}
+.findUs{
+    font-size: medium;
+    justify-content: left;
+    align-content: center;
+    background-color: #494b53;
+    background-image: linear-gradient(to bottom, #39496d, #035279);
+    /* background-image: linear-gradient(to bottom right, #205c66, #357883); */
+    margin-bottom: 4px;
+    /* box-shadow: 3px 3px 3px #2b3751; */
+    padding: 25px;
+    text-align: center;
+    color:#D8DBE2
+    
+
+    
+}
+.boldText{
+    font-weight: bolder;
+}
+.map {
+    background-color: #373F51;
+    background-image: linear-gradient(to bottom right, #f8fcfc, #b0b5c2);
+    background-color:  #D8DBE2;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    
+   
+}
+.contact{
+    padding: 10px;
+    background-color: #D8DBE2;
+    background-image: linear-gradient(to bottom right, #f8fcfc, #b0b5c2);
+}
+.stars{
+    height: 50px;
+    margin: 10px;
+
+}
+.bottomNav{
+    margin-top: 3px;
+    text-align: center;
+    font-size: small;
+    background-color: #373F51;
+    background-image: linear-gradient(#bbc5c5, #656a78);
+    /* background-image: linear-gradient(to bottom right, #325a60, #373F51); */
+    color:   #D8DBE2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
