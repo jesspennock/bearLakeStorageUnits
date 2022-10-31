@@ -127,9 +127,6 @@ h4 {
     align-content: flex-end;
     background-image: linear-gradient(to top, #fdfdfd, #777c8b);
     /* box-shadow: 2px 3px 2px #192c2e; */
-    
-   
-    
 }
 .col{
     font-size: 16px;
@@ -196,6 +193,25 @@ h4 {
     margin: 10px;
 
 }
+.starCheckbox {
+    margin-bottom: 40px;
+}
+.star {
+    visibility:hidden;
+    font-size:30px;
+    margin: 5px;
+    cursor:pointer;
+}
+.star:before {
+   content: "\2605";
+   position: absolute;
+   visibility:visible;
+}
+.star:checked:before {
+   content: "\2606";
+   position: absolute;
+}
+
 .bottomNav{
     margin-top: 3px;
     text-align: center;
