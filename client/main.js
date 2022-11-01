@@ -23,7 +23,8 @@ const getUnitSizeGroup = (size) => {
     axios.get(`http://localhost:4000/api/units/${size}`)
     .then(res => {
         console.log(res)
-        // bind to the new modal
+        loadUnitSizeGroup(size, res.data)
+        // call loadUnitSizeGroup(size)
         // loop through the res.data
         // create new little html elements with that data
     })
@@ -46,6 +47,51 @@ const addWaiter = () => {
 
 const submitNewReview = () => {
 
+}
+
+const loadUnitSizeGroup = (size, data) => {
+    const {annualRate, monthlyRate, squareFootage} = data[0]
+    let collapseDetailsElement
+    switch (size) {
+        case '10x24':
+            collapseDetailsElement = document.getElementById("collapseTypeInfoMed")
+        break;
+        case '12x32':
+            collapseDetailsElement = document.getElementById("collapseTypeInfoLarge")
+        break;
+        case '12x40':
+            collapseDetailsElement = document.getElementById("collapseTypeInfoXLarge")
+        break;
+        default:
+            collapseDetailsElement = document.getElementById("collapseTypeInfoFlex")
+    }
+    console.info(data)
+
+    let availableUnitCount = data.filter((unit) => unit.available === true).length
+    let monthlyRateDisplay 
+    let annualRateDisplay 
+
+    if(monthlyRate>0){
+         monthlyRateDisplay = `$${monthlyRate}`
+    }
+    else{
+        monthlyRateDisplay="Call for Details"
+    }
+    if(annualRate>0){
+         annualRateDisplay = `$${annualRate}`
+    }
+    else{
+        annualRateDisplay = "Call for Details"
+
+    }
+    collapseDetailsElement.innerHTML = `
+        <ul>
+            <li>Annual Rate: ${annualRateDisplay}</li>
+            <li>Monthly Rate: ${monthlyRateDisplay}</li>
+            <li>Square Footage: ${squareFootage}</li>
+            <li>Availability: ${availableUnitCount} / ${data.length}</li>
+        </ul>
+    `
 }
 
 const loadUnitTable = (data) => {

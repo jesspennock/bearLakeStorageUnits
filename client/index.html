@@ -15,7 +15,7 @@
         </a>
         <ul class="nav">
             <li class="nav-item"><a href="#topBanner" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#unitTable" class="nav-link" data-bs-toggle="modal" data-bs-target="#unitListModal">Units</a>
+            <li class="nav-item"><a href="#unitTable" class="nav-link">Units</a>
             </li>
             <li class="nav-item"><a href="#googleMap" class="nav-link">Map</a></li>
             <li class="nav-item"><a href="#contactInfo" class="nav-link">Contact</a></li>
@@ -70,8 +70,10 @@
                 </ul>
                 <!-- <p> We have 4 medium sized units with 10' doors that are 24' long.<br><br></p> -->
                 <!-- <p>Pricing is $100/month if paid annually or $125/month monthly.</p> -->
-                <button type= "button" class="btn btn-secondary button-17" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover"id="typeInfoMed">
-                Check Details and Availability</button>
+                <button type="button" class="btn btn-secondary button-17" id="typeInfoMed" data-bs-toggle="collapse" data-bs-target="#collapseTypeInfoMed" aria-expanded="false" aria-controls="collapseTypeInfoMed">
+                    Check Details and Availability
+                </button>
+                <div class="collapse" id="collapseTypeInfoMed"></div>
             </div>
             <div class="col">
                 <div class="h4"><h4>12X32</h4></div>
@@ -80,10 +82,10 @@
                     <li>12 feet wide x 32 feet long</li>
                     <li>1 twelve foot door</li>
                 </ul>
-                <!-- <p> We have 2 large units with 12' doors that are 32' long.<br><br></p> -->
-                
-                <!-- <p>Pricing is $200/month if paid annually or $225/month monthly.</p> -->
-                <button class="button-17" id="typeInfoLarge"data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
+                <button type="button" class="btn btn-secondary button-17" id="typeInfoLarge" data-bs-toggle="collapse" data-bs-target="#collapseTypeInfoLarge" aria-expanded="false" aria-controls="collapseTypeInfoLarge">
+                    Check Details and Availability
+                </button>
+                <div class="collapse" id="collapseTypeInfoLarge"></div>
             </div>
             <div class="col">
                 <div class="h4"><h4>12X40</h4></div>
@@ -92,20 +94,18 @@
                     <li>12 feet wide x 40 feet long</li>
                     <li>2 twelve foot doors</li>
                 </ul>
-                <!-- <p> We have 2 X-large units each with 12' wide doors at the front and back of the unit and 40' length.</p> -->
-                
-                <!-- <p>Pricing is $300/month if paid annually or $350/month monthly. </p> -->
-                <button class="button-17" id="typeInfoXLarge"data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
+                <button type="button" class="btn btn-secondary button-17" id="typeInfoXLarge" data-bs-toggle="collapse" data-bs-target="#collapseTypeInfoXLarge" aria-expanded="false" aria-controls="collapseTypeInfoXLarge">Check Details and Availability</button>
+                <div class="collapse" id="collapseTypeInfoXLarge"></div>
             </div>
             <div class="col">
                 <div class="h4"><h4>45X45</h4></div>
                 <ul>
                     <li>Flex Space</li>
-                    <li>Power, wood flooring, bathroom</li>
-                    <li>Contact for pricing</li>
+                    <li>Power, bathroom</li>
+                    <li>Wood flooring throughout</li>
                 </ul>
-                <!-- <p> This is a 1600 square foot indoor space with wooden floors and a bathroom. Contact for pricing.</p> -->
-                <button class="button-17" id="typeInfoFlex" data-bs-toggle="modal" data-bs-target="#unitInfoModal">Check Details and Availability</button>
+                <button type="button" class="btn btn-secondary button-17" id="typeInfoFlex" data-bs-toggle="collapse" data-bs-target="#collapseTypeInfoFlex" aria-expanded="false" aria-controls="collapseTypeInfoFlex">Check Details and Availability</button>
+                <div class="collapse" id="collapseTypeInfoFlex"></div>
             </div>
         </div>
             <div class = "container waitingList">
@@ -187,87 +187,85 @@
 
     <div class="modal fade" id="unitInfoModal" tabindex="-1" aria-labelledby="unitInfoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="unitInfoModalLabel">Unit Details</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="unitInfoModalLabel">Unit Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="unitInfo">
+                    [Unit Details]
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
             </div>
-            <div class="modal-body" id="unitInfo">
-              [Unit Details]
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send message</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
       
-      
-      <div class="modal fade" id="waitingListModal" tabindex="-1" aria-labelledby="waitingListLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="waitingListModalLabel">Add Your Contact Info to a Waiting List:</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="submitWaitingListForm">
-              <form>
-                  <div class="mb-3">
-                      <label for ="firstName" class="form-label">First Name</label><br/>
-                      <input type="text" class="form-control" id ="firstName"><br/>
-                      <label for ="lastName" class="form-label">Last Name</label><br/>
-                      <input type="text" class="form-control" id ="lastName"><br/>
-                      <label for="inputEmail" class="form-label">Email Address</label>
-                      <input type="email" class="form-control" id="inputEmail">
-                      <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-                      <input type="number" class="form-control" id="inputPhoneNumber" >
-                  </div>
-                  <div class="mb-3">
-                      <label for="sizeRequest" class="form-label">Unit sizes you are interested in:</label>
-                      <input type="text" class="form-control" id="sizeRequest"></br>
-                      
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-          </div>
+    <div class="modal fade" id="waitingListModal" tabindex="-1" aria-labelledby="waitingListLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="waitingListModalLabel">Add Your Contact Info to a Waiting List:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="submitWaitingListForm">
+                    <form>
+                        <div class="mb-3">
+                            <label for ="firstName" class="form-label">First Name</label><br/>
+                            <input type="text" class="form-control" id ="firstName"><br/>
+                            <label for ="lastName" class="form-label">Last Name</label><br/>
+                            <input type="text" class="form-control" id ="lastName"><br/>
+                            <label for="inputEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                            <label for="inputPhoneNumber" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="inputPhoneNumber" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="sizeRequest" class="form-label">Unit sizes you are interested in:</label>
+                            <input type="text" class="form-control" id="sizeRequest"></br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-
-      <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewLabel" aria-hidden="true">
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="reviewsModalLabel">Submit A Review</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="submitReviewForm">
-                <form>
-                    <div class="mb-3">
-                        <label for ="name" class="form-label">Name</label><br/>
-                        <input type="text" class="form-control" id ="name"><br/>
-                        <label for="inputEmail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail">
-                    </div>
-                    <div class="mb-3">
-                        <label for="reviewText" class="form-label">Enter Review Here:</label>
-                        <input type="text" class="form-control" id="reviewText">
-                        <div class="starCheckbox">
-                            <input class="star" type="checkbox" title="bookmark page" value="1">
-                            <input class="star" type="checkbox" title="bookmark page" value="2">
-                            <input class="star" type="checkbox" title="bookmark page" value="3">
-                            <input class="star" type="checkbox" title="bookmark page" value="4">
-                            <input class="star" type="checkbox" title="bookmark page" value="5">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="reviewsModalLabel">Submit A Review</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="submitReviewForm">
+                    <form>
+                        <div class="mb-3">
+                            <label for ="name" class="form-label">Name</label><br/>
+                            <input type="text" class="form-control" id ="name"><br/>
+                            <label for="inputEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail">
                         </div>
-                      <input type="checkbox" class="form-check-input" id="shareReview">
-                      <label class="form-check-label" for="shareReview">Check here if it's okay for us to share your review publicly</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                        <div class="mb-3">
+                            <label for="reviewText" class="form-label">Enter Review Here:</label>
+                            <input type="text" class="form-control" id="reviewText">
+                            <div class="starCheckbox">
+                                <input class="star" type="checkbox" title="bookmark page" value="1">
+                                <input class="star" type="checkbox" title="bookmark page" value="2">
+                                <input class="star" type="checkbox" title="bookmark page" value="3">
+                                <input class="star" type="checkbox" title="bookmark page" value="4">
+                                <input class="star" type="checkbox" title="bookmark page" value="5">
+                            </div>
+                            <input type="checkbox" class="form-check-input" id="shareReview">
+                            <label class="form-check-label" for="shareReview">Check here if it's okay for us to share your review publicly</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
-
-      </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -120,6 +120,7 @@ h4 {
     justify-content: center;
 }
 .units{
+    text-align: left;
     margin-top: 3 px;
     background-color: #a9aebc;
     font-size: large;
