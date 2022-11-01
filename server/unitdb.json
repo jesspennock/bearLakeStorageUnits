@@ -4,6 +4,7 @@
         "category": "10x24",
         "name": "Medium Unit 1",
         "available": false,
+        "squareFootage": 240,
         "monthlyRate": 125,
         "annualRate": 100
     },
@@ -12,6 +13,7 @@
         "category": "10x24",
         "name": "Medium Unit 2",
         "available": false,
+        "squareFootage": 240,
         "monthlyRate": 125,
         "annualRate": 100
         },
@@ -20,6 +22,7 @@
         "category": "10x24",
         "name": "Medium Unit 3",
         "available": false,
+        "squareFootage": 240,
         "monthlyRate": 125,
         "annualRate": 100
     },
@@ -28,6 +31,7 @@
         "category": "10x24",
         "name": "Medium Unit 4",
         "available": false,
+        "squareFootage": 240,
         "monthlyRate": 125,
         "annualRate": 100
     },
@@ -36,6 +40,7 @@
         "category": "12x32",
         "name": "Large Unit 1",
         "available": false,
+        "squareFootage": 384,
         "monthlyRate": 225,
         "annualRate": 200
     },
@@ -43,6 +48,7 @@
         "id": 6,
         "category": "12x32",
         "name": "Large Unit 2",
+        "squareFootage": 384,
         "available": false,
         "monthlyRate": 225,
         "annualRate": 200
@@ -52,6 +58,7 @@
         "category": "12x40",
         "name": "X-Large Unit 1",
         "available": false,
+        "squareFootage": 480,
         "monthlyRate": 350,
         "annualRate": 300
     },
@@ -60,6 +67,7 @@
         "category": "12x40",
         "name": "X-Large Unit 2",
         "available": false,
+        "squareFootage": 480,
         "monthlyRate": 350,
         "annualRate": 300
      },
@@ -68,6 +76,7 @@
         "category": "45x45",
         "name": "Indoor Flex Space",
         "available": false,
+        "squareFootage": 1600,
         "monthlyRate": "Call for details",
         "annualRate": "Call for details"
     }
