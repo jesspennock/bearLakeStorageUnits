@@ -15,7 +15,7 @@
         </a>
         <ul class="nav">
             <li class="nav-item"><a href="#topBanner" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#unitTable" class="nav-link">Units</a>
+            <li class="nav-item"><a href="#quickGlanceUnits" class="nav-link">Units</a>
             </li>
             <li class="nav-item"><a href="#googleMap" class="nav-link">Map</a></li>
             <li class="nav-item"><a href="#contactInfo" class="nav-link">Contact</a></li>
@@ -53,13 +53,11 @@
         </div>
         <div class="col-md-6 mt-4">
             <h3>Welcome to Sweetwater Storage <br>at Bear Lake</h3>
-            <p> Located just minutes from Garden City, Utah, our storage facility features versatile rental space for your RV, Boat, Home Storage, or Commercial use. We offer four different unit sizes ranging from 10' X 12' to 45'x45'. The largest area is a 1600 sq. foot indoor space that includes wooden floors and restrooms. It has previously been successfully used as an office space, dance studio, and preschool. Pricing is competitive and we offer discounts for annual payment. Units are accessible 24 hours a day. </p>
-            <!-- <button class="button-16 paddedBtn" data-bs-toggle="modal" data-bs-target="#unitList">Get All Unit Info</button>
-            <button class="button-16">Contact Us</button> -->
+            <p> Located just minutes from Garden City, Utah, Sweetwater Storage features versatile rental spaces for your RV, Boat, Home Storage, or Commercial use. We offer four different unit sizes ranging from 10' X 12' to 45'x45'. The largest area is a 1600 sq. foot indoor space that includes wooden floors and restrooms. It has previously been successfully used as an office space, dance studio, and preschool. Pricing is competitive and we offer discounts for annual payment. Units are accessible 24 hours a day. </p>
         </div>
     </div>
    
-    <div class="container text-center units">
+    <div class="container text-center units"id="quickGlanceUnits">
         <div class="row">
             <div class="col">
                 <div class="h4"><h4>10X24</h4></div>
@@ -68,8 +66,7 @@
                     <li>10 feet wide x 24 feet long</li>
                     <li>1 ten foot door</li>
                 </ul>
-                <!-- <p> We have 4 medium sized units with 10' doors that are 24' long.<br><br></p> -->
-                <!-- <p>Pricing is $100/month if paid annually or $125/month monthly.</p> -->
+
                 <button type="button" class="btn btn-secondary button-17" id="typeInfoMed" data-bs-toggle="collapse" data-bs-target="#collapseTypeInfoMed" aria-expanded="false" aria-controls="collapseTypeInfoMed">
                     Check Details and Availability
                 </button>
@@ -113,35 +110,18 @@
             </div>
     </div>
    
-    <div class="container">
-        <h4>Quick Glance Availability for All Units</h4>
+    <div class="container unitTable" >
+        <h4 class="tableLabel">Quick Glance Availability for All Units</h4>
         <table class="table table-bordered" id="unitTable">
             <thead>
               <tr>
                 <th scope="col" id="unitID">Unit ID#</th>
                 <th scope="col" id="unitsize">Size</th>
                 <th scope="col" id="startingPrice">Price Starting At</th>
-                <th scope="col" id="avaialbe">Availability</th>
+                <th scope="col" id="available">Availability</th>
               </tr>
             </thead>
             <tbody id="unitTableBody">
-              <!-- <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr> -->
             </tbody>
           </table>
     </div>

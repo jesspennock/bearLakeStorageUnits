@@ -96,7 +96,7 @@ header {
     color: #2b3751;
 }
 .aboutUs{
-    font-size: larger;
+    font-size: 24px;
     justify-content: left;
     align-content: center;
     background-color: #4b6ab3;
@@ -139,9 +139,21 @@ h4 {
 .waitingList{
     margin-top: 10px;
     font-size: medium;
+    color: #2b3751; 
+}
+.unitTable{
+    background-color: #a9aebc;
     color: #2b3751;
+    margin-bottom: 15px;
+    border: 2px solid #2b3751;
     
     
+}
+.tableLabel{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: #777c8b;
 }
 .ca{
     align-content: flex-end;

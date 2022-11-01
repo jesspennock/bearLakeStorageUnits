@@ -27,9 +27,8 @@ module.exports = {
            email,
            phone,
            unitSize
-
         }
-        waitinglistDB.push(neWaiter)
+        waitinglistDB.push(newWaiter)
         globalIDWaitingList++
         res.status(200).send(waitinglistDB)
     },
@@ -45,6 +44,5 @@ module.exports = {
         reviewDB.push(newReview)
         globalIDReview++
         res.status(200).send(reviewDB)
-
     }
 }
