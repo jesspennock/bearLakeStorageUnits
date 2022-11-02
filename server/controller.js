@@ -2,8 +2,8 @@
 const unitDB = require('./unitDB.json')
 const waitinglistDB = require('./waitingListDB.json')
 const reviewDB = require('./reviewDB.json')
-let globalIDReview = 4
-let globalIDWaitingList = 4
+let globalIDReview = 2
+let globalIDWaitingList = 2
 
 
 module.exports = {
@@ -16,12 +16,12 @@ module.exports = {
     },
     getAllUnits: (req, res) => {
         res.status(200).send(unitDB)
-
     },
     getOnAWaitingList: (req,res) => {
+        console.log(req.body)
         const {firstName, lastName, email, phone, unitSize} = req.body
         let newWaiter = {
-           id: globalIDwaitingLst,
+           id: globalIDWaitingList,
            firstName,
            lastName,
            email,
@@ -33,13 +33,15 @@ module.exports = {
         res.status(200).send(waitinglistDB)
     },
     submitReview: (req,res) => {
-        const {name, email, reviewText, stars} =req.body
+        const {name, email, reviewText, stars, share} =req.body
         let newReview = {
             id: globalIDReview,
             name,
             email,
             reviewText,
-            stars
+            stars,
+            share
+
         }
         reviewDB.push(newReview)
         globalIDReview++

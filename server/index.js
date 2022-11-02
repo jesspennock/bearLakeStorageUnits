@@ -15,6 +15,6 @@ const{
 app.get("/api/units/:size", getSizeGroupInfo)
 app.get("/api/units", getAllUnits)
 app.post("/api/submitReview", submitReview)
-app.post("/api/waitinglist", getOnAWaitingList)
+app.post("/api/waitingList", getOnAWaitingList)
 
 app.listen(4000, () => console.log("Server running on 4000"))

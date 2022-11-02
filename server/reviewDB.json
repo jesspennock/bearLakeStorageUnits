@@ -4,6 +4,7 @@
         "name": "John Renter",
         "email": "johnrenter@abc.com",
         "reviewText": "I love to rent.",
-        "stars": 5
+        "stars": 5,
+        "share": true
     }
 ]

@@ -3,6 +3,8 @@ const unitDetailsBtnLarge = document.getElementById("typeInfoLarge")
 const unitDetailsBtnXLarge = document.getElementById("typeInfoXLarge")
 const unitDetailsBtnFlex = document.getElementById("typeInfoFlex")
 const unitTableBody = document.getElementById("unitTableBody")
+const submitWaiterBtn=document.getElementById("submitWaiterBtn")
+const submitReviewBtn=document.getElementById("submitReviewButton")
 
 const errCallback = err => console.log(err)
 
@@ -26,16 +28,20 @@ const getUnitSizeGroup = (size) => {
     .catch(errCallback)
 }
 const addReview = (reviewObj) => {
-    axios.post('http://localhost4000/api/submitReview', reviewObj)
+    axios.post('http://localhost:4000/api/submitReview', reviewObj)
     .then(res => {
         console.log(res)
+        // close the modal
+        // alert?
     })
     .catch(errCallback)
 }
 const addWaiter = (waiterObj) => {
-    axios.post('http://localhost4000/api/waitingList', waiterObj)
-    then(res => {
+    axios.post('http://localhost:4000/api/waitingList', waiterObj)
+    .then(res => {
         console.log(res)
+        // close the modal
+        // alert?
     })
     .catch(errCallback)
 }
@@ -93,7 +99,6 @@ const loadUnitTable = (data) => {
        }
        else{
            annualRateDisplay = "Call for Details"
-   
        }
         let tableRow = document.createElement('tr')
         tableRow.innerHTML = `
@@ -108,16 +113,60 @@ const loadUnitTable = (data) => {
 }
 
 const submitNewReview = () => {
-    //TODO collect data from the form, give it the new object
-}
+    let nameInput = document.querySelector("#name")
+    let emailInput = document.querySelector("#email")
+    let reviewTextInput = document.querySelector("#reviewText")
+    let starRatingInput = document.querySelector("input[name='starRatingInput']:checked")
+    let shareReviewInput = document.querySelector("#shareReview")
+
+    let newReviewObj = {
+        name: nameInput.value,
+        email: emailInput.value,
+        reviewText: reviewTextInput.value,
+        stars: parseInt(starRatingInput.value),
+        share: shareReviewInput.checked,
+    }
+
+    console.info(newReviewObj)
+
+    addReview(newReviewObj)
+
+    nameInput.value = ""
+    emailInput.value = ""
+    reviewTextInput.value = ""
+    starRatingInput.value = ""
+    shareReviewInput.value = ""
+} 
 
 const submitWaitingList = () => {
-    //TODO
-}
+    let firstNameInput = document.querySelector("#firstName")
+    let lastNameInput = document.querySelector("#lastName")
+    let emailInput = document.querySelector("#inputEmail")
+    let phoneNumberInput = document.querySelector("#inputPhoneNumber")
+    let sizeRequestInput = document.querySelector("#sizeRequest")
+
+    let newWaiterObj = {
+        firstName: firstNameInput.value,
+        lastName: lastNameInput.value,
+        email: emailInput.value,
+        phone: phoneNumberInput.value,
+        unitSize: sizeRequestInput.value,
+    } 
+    addWaiter(newWaiterObj)
+
+    firstNameInput.value = ""
+    lastNameInput.value = ""
+    emailInput.value = ""
+    phoneNumberInput.value = ""
+    sizeRequestInput.value = ""
+} 
+
 
 unitDetailsBtnMed.addEventListener('click', () => getUnitSizeGroup('10x24'));
 unitDetailsBtnLarge.addEventListener('click', () => getUnitSizeGroup('12x32'));
 unitDetailsBtnXLarge.addEventListener('click', () => getUnitSizeGroup('12x40'));
 unitDetailsBtnFlex.addEventListener('click', () => getUnitSizeGroup('45x45'));
+submitWaiterBtn.addEventListener("click", () => submitWaitingList());
+submitReviewBtn.addEventListener("click", () => submitNewReview());
 
 getAllUnits()
